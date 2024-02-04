@@ -13,4 +13,4 @@ if __name__ == "__main__":
     assert divby(5,2.5) == True
     assert divby(99.6, 100) == False
     assert divby(55,5) == True
-
+    print("All tests passed!")
