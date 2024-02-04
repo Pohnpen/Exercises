@@ -6,7 +6,10 @@ def divby(n,d):
     n := number (int, float)
     d := divisor (int, float)
     """
-    pass
+    if n % d == 0:
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
     assert divby(5,2) == False
