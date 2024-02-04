@@ -2,7 +2,7 @@ def reverse(s):
     """
     Returns the string s in reversed order
     :param s:
-    :return:
+    :return: r
     """
     pass
 
