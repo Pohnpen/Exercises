@@ -9,11 +9,11 @@ If the number is greater than 500, then stop the loop
 numbers = [12, 75, 150, 180, 145, 525, 50]
 i = []
 for i in numbers:
-    if i >= 150:
+    if i > 500:
+        break
+    elif i > 150:
         continue
     elif i % 5 == 0:
-        i += i
-    if i >= 500:
-        break
+        print(i)
 
-    print(i)
+
