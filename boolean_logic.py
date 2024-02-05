@@ -18,25 +18,39 @@ def boolean_exercise_2(x,y,z):
     Create a boolean function using AND, OR, and NOT gates that implements
     the function of three variables that is 1 if all three inputs are
     the same, and 0 otherwise.
-
     """
-    pass
+    if x == y == z:
+        return 1
+    return 0
 
 def boolean_exercise_3(a,b,c,d):
     """
-    Create a boolean function using AND, OR, and NOT gates that implements
+    Create a boolean function using AND, OR, and NOT logic that implements
     the function of four variables that is 1 if precisely two of the
     variables have the same value, 0 otherwise.
+
+    A set() based implementation
+    if len(set((a,b,c,d))) == len(tuple((a,b,c,d)))-1:
+        return 1
+    return 0
     """
-    pass
+    if a == b or a == c or a == d or b == c or b == d or c == d:
+        return 1
+    return 0
 
 def boolean_exercise_4(k,j,i):
     """
     Create a boolean function using AND, OR, and NOT gates that implements
     the function of three variables that is 0 if all three inputs are
     the same, and 1 otherwise.
+
+    A weird reuse of function 3:
+    return int( not bool(boolean_exercise_2(k,j,i)))
     """
-    pass
+    if k == j == i:
+        return 0
+    return 1
+
 
 def fuzzy_bool(f, cutoff=0.5):
     """
@@ -47,6 +61,9 @@ def fuzzy_bool(f, cutoff=0.5):
     return False
 
 
-print(boolean_exercise_1(True, True) == True)
-print(boolean_exercise_1(False, False) == True)
-print(boolean_exercise_1(True, False) == False)
+print(boolean_exercise_3(55,23,45,23) == 1)
+print(boolean_exercise_3(55,23,23,45) == 1)
+print(boolean_exercise_3(23,66,45,23) == 1)
+print(boolean_exercise_3(55,23,45,88) == 0)
+
+print(boolean_exercise_3(23,23,45,23) == 0)
