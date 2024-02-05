@@ -7,7 +7,6 @@ If the number is greater than 500, then stop the loop
 """
 
 numbers = [12, 75, 150, 180, 145, 525, 50]
-i = []
 for i in numbers:
     if i > 500:
         break
@@ -15,5 +14,3 @@ for i in numbers:
         continue
     elif i % 5 == 0:
         print(i)
-
-
